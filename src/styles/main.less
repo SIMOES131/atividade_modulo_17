@@ -1,0 +1,98 @@
+
+@import "mapas.less";
+
+@breakpointMobile: ~"(max-width: 767px)"; // Esse é o conceito de escaping
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.text-decoration {
+    text-decoration: none;
+}
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+body {
+    background-color: #colors[backgroundColor];
+    color: #colors[textColor];
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    
+    
+    
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+}
+
+header {
+
+    .container {
+        margin-left: 13%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+
+     .menu {
+        display: flex;
+        .text-decoration();
+        
+        li a {
+            .text-decoration();
+            padding: 8px 15px;
+            color: #colors[textColor];
+        }
+     } 
+}
+
+section {
+
+    .container {
+        margin-left: 13%;
+
+        .products {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 24.5%);
+            column-gap: 1%;
+            row-gap: 4%;
+            width: 100%;
+
+            .product-item img {
+                width: 100%;
+                border-radius: 16px;
+            }
+
+            .product-button {
+                display: block;
+                color: #colors[buttonColor];
+                text-align: center;
+                padding: 8px 0;
+                border-radius: 8px;
+                margin-top: 8px;
+                text-decoration: none;
+            }
+        }
+    }  
+}
